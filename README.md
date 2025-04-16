@@ -1,5 +1,6 @@
-# biostatistics-GnRH_TRH_CCK
-Hypothalamic asymmetry for differential endocrine control of left and right body sides
+# Hypothalamic asymmetry for differential endocrine control of left and right body sides
+
+### Abstract
 
 Beyond neural pathways, the brain may regulate the left and right sides of the body through
 neurohormones released from the hypothalamus into the bloodstream. Hemisphere-specific
