@@ -29,5 +29,5 @@ Hiroyuki Watanabe1,*, Yaromir Kobikov2,*, Olga Nosova1,*, Alice Lukoyanova5,7*, 
 8 Department of Neurology, Mayo Clinic, Rochester, MN, USA
 9 Department of Molecular Medicine, University of Southern Denmark, Odense, Denmark
 
-* Contributed equally to this work
+'*' Contributed equally to this work
 '#' Senior co-authors
