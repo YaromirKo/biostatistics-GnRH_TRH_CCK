@@ -1,21 +1,122 @@
-# Hypothalamic asymmetry for differential endocrine control of left and right body sides
+# Hypothalamic Asymmetry for Differential Endocrine Control of Left and Right Body Sides
 
-### Abstract
+This project implements a complete biostatistical analysis pipeline in **R** to investigate the molecular and functional lateralization of the hypothalamus. It includes data preprocessing, Bayesian multilevel modeling of GnRH, TRH, and CCK gene expression, and visualization of asymmetric endocrine control.
 
-Beyond neural pathways, the brain may regulate the left and right sides of the body through
-neurohormones released from the hypothalamus into the bloodstream. Hemisphere-specific
-neural activity may be encoded into side-specific hormonal messages—provided the
-hypothalamus is asymmetrically organized. Comparison of the left and right hypothalamus
-revealed subtle expression asymmetries for most neurohormonal genes, yet these genes
-formed robust left- and right-dominant co-expression networks. These networks were
-differentially coordinated with pituitary hormone genes and exhibited ipsilateral, side-specific
-correlations with spinal gene expression. Chemogenetic activation of vasopressin neurons and
-unilateral brain injury disrupted these coordination patterns in a lateralized manner. In
-functional experiments, central administration of lateralized hypothalamic neurohormones
-induced asymmetric motor responses via the humoral pathway. These findings suggest that
-the neuroendocrine hypothalamus is both molecularly and functionally lateralized, enabling it
-to convert hemisphere-specific neural activity into side-specific hormonal signals that regulate
-peripheral organs.
+---
+
+### Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Methods & Scripts](#methods--scripts)
+- [Results & Outputs](#results--outputs)
+- [Contributing](#contributing)
+- [License](#license)
+- [Citation](#citation)
+
+---
+
+## Features
+- Bayesian multilevel modeling with **brms** and Stan  
+- Data wrangling & visualization using the **tidyverse**  
+- Publication‑ready figures via **ggplot2**, **cowplot**, and **patchwork**  
+- Posterior predictive checks and Bayesian p‑values  
+- Modular code organization for raw data, scripts, and results  
+
+---
+
+## Installation
+
+1. **Prerequisites**  
+   - R ≥ 4.4.3  
+   - C++ toolchain for Stan models  
+
+2. **Clone repository**  
+   ```bash
+   git clone https://github.com/YaromirKo/biostatistics-GnRH_TRH_CCK.git
+   cd biostatistics-GnRH_TRH_CCK
+   ```
+
+3. **Install R packages**  
+   ```r
+   install.packages(c(
+     "tidyverse",
+     "brms",
+     "rstan",
+     "posterior",
+     "bayesplot",
+     "readxl",
+     "openxlsx",
+     "flextable",
+     "officer"
+   ))
+   ```
+
+---
+
+## Usage
+
+1. **Open R project**  
+   Launch `GnRH_TRH_CCK_Stat_25 04 10.Rproj` in RStudio.
+
+2. **Run main script**  
+   ```r
+   source("BayesianPValue.R")
+   ```
+   This preprocesses data, fits models, computes p‑values, and writes outputs to `results/`.
+
+3. **Generate figures**  
+   Use the scripts in `task_1/` to produce publication‑quality plots and tables.
+
+---
+
+## Project Structure
+
+```
+data/                         # Raw & intermediate data  
+task_1/                       # Task‑specific analysis scripts  
+BayesianPValue.R              # Main modeling script  
+GnRH_TRH_CCK_Stat_25_04_10.Rproj  # RStudio project file  
+results/                      # Outputs: figures, tables, reports  
+.gitignore  
+README.md  
+```
+
+---
+
+## Methods & Scripts
+- **Data Preprocessing**: Tidy data with **dplyr**, **tidyr**, **readr**  
+- **Model Specification**: Define **brms** formulas with group‑specific priors  
+- **Posterior Analysis**: Summarize fits, compute p‑values, visualize with **bayesplot** and **ggplot2**
+
+---
+
+## Results & Outputs
+The `results/` folder contains:  
+- **Figures** (`.png`, `.pdf`) of lateralized expression  
+- **Tables** (`.csv`, `.xlsx`) of posterior estimates  
+- **Report** (`.html`, `.docx`) via **officer** and **flextable**  
+
+---
+
+## Contributing
+1. Fork the repository  
+2. Create a branch: `git checkout -b feature/YourFeature`  
+3. Commit & push: `git push origin feature/YourFeature`  
+4. Open a Pull Request  
+
+---
+
+## License
+This project is licensed under the **MIT License**. See `LICENSE` for details.
+
+---
+
+## Citation
+If you use this work, please cite:
+
+> Bürkner, P.-C. (2017). *brms: An R Package for Bayesian Multilevel Models Using Stan*. Journal of Statistical Software, 80(1), 1–28.
 
 ### System Info
 
