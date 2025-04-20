@@ -17,7 +17,7 @@ the neuroendocrine hypothalamus is both molecularly and functionally lateralized
 to convert hemisphere-specific neural activity into side-specific hormonal signals that regulate
 peripheral organs.
 
-### System Info
+### System Info
 
 R version 4.4.3 (2025-02-28)
 Platform: x86_64-pc-linux-gnu
